@@ -14,7 +14,7 @@ export default function Home() {
                 <ToolCard
                   title={tool.title}
                   description={tool.description}
-                  href={`/tools/${category.id}/${tool.id}`}
+                  href={`/${category.id}/${tool.id}`}
                 />
               </div>
             ))}
