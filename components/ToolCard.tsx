@@ -1,10 +1,15 @@
-import Link from 'next/link'
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import Link from "next/link";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 interface ToolCardProps {
-  title: string
-  description: string
-  href: string
+  title: string;
+  description: string;
+  href: string;
 }
 
 export function ToolCard({ title, description, href }: ToolCardProps) {
@@ -17,6 +22,5 @@ export function ToolCard({ title, description, href }: ToolCardProps) {
         </CardHeader>
       </Card>
     </Link>
-  )
+  );
 }
-

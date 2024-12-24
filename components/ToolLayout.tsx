@@ -1,14 +1,26 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 interface ToolLayoutProps {
-  title: string
-  description: string
-  information: string
-  useCases: string[]
-  children: React.ReactNode
+  title: string;
+  description: string;
+  information: string;
+  useCases: string[];
+  children: React.ReactNode;
 }
 
-export function ToolLayout({ title, description, information, useCases, children }: ToolLayoutProps) {
+export function ToolLayout({
+  title,
+  description,
+  information,
+  useCases,
+  children,
+}: ToolLayoutProps) {
   return (
     <div className="space-y-8">
       <div className="text-center">
@@ -33,11 +45,8 @@ export function ToolLayout({ title, description, information, useCases, children
         <CardHeader>
           <CardTitle>Try it Out</CardTitle>
         </CardHeader>
-        <CardContent>
-          {children}
-        </CardContent>
+        <CardContent>{children}</CardContent>
       </Card>
     </div>
-  )
+  );
 }
-

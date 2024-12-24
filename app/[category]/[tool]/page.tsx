@@ -1,16 +1,20 @@
-import { categories } from '@/app/config/tools'
-import { ToolLayout } from '@/components/ToolLayout'
-import { notFound } from 'next/navigation'
+import { categories } from "@/app/config/tools";
+import { ToolLayout } from "@/components/ToolLayout";
+import { notFound } from "next/navigation";
 
-export default function ToolPage({ params }: { params: { category: string; tool: string } }) {
-  const category = categories.find(c => c.id === params.category)
-  const tool = category?.tools.find(t => t.id === params.tool)
+export default function ToolPage({
+  params,
+}: {
+  params: { category: string; tool: string };
+}) {
+  const category = categories.find((c) => c.id === params.category);
+  const tool = category?.tools.find((t) => t.id === params.tool);
 
   if (!category || !tool) {
-    notFound()
+    notFound();
   }
 
-  const ToolComponent = tool.component
+  const ToolComponent = tool.component;
 
   return (
     <ToolLayout
@@ -21,6 +25,5 @@ export default function ToolPage({ params }: { params: { category: string; tool:
     >
       <ToolComponent />
     </ToolLayout>
-  )
+  );
 }
-
